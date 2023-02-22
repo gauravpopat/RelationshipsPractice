@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/belongsTo',[HomeController::class,'getProject'])->name('belongsTo');
+Route::get('/hasOne',[HomeController::class,'getStudent'])->name('hasOne');
+Route::get('/hasMany',[HomeController::class,'getStudents'])->name('hasMany');
+Route::get('/latest',[HomeController::class,'getLatestStudent'])->name('hasOneOfMany');
+Route::get('/oldest',[HomeController::class,'getOldestStudent'])->name('hasOneOfMany');
+Route::get('/hasOneThrow',[HomeController::class,'getProjectCord'])->name('getProjectCord');
+Route::get('hasManyThrow',[HomeController::class,'getProjectCords'])->name('hasManyThrow');
