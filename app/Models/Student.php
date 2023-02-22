@@ -14,4 +14,9 @@ class Student extends Model
     {
         return $this->belongsTo(Project::class);
     }
+
+    public function getProject()
+    {
+        return $this->belongsToMany(Project::class,'students_projects');
+    }
 }

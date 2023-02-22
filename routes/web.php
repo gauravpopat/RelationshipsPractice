@@ -24,4 +24,5 @@ Route::get('/hasMany',[HomeController::class,'getStudents'])->name('hasMany');
 Route::get('/latest',[HomeController::class,'getLatestStudent'])->name('hasOneOfMany');
 Route::get('/oldest',[HomeController::class,'getOldestStudent'])->name('hasOneOfMany');
 Route::get('/hasOneThrow',[HomeController::class,'getProjectCord'])->name('getProjectCord');
-Route::get('hasManyThrow',[HomeController::class,'getProjectCords'])->name('hasManyThrow');
+Route::get('/hasManyThrow',[HomeController::class,'getProjectCords'])->name('hasManyThrow');
+Route::get('/belongsToMany',[HomeController::class,'show_project'])->name('belongsToMany');

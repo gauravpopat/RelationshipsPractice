@@ -56,5 +56,10 @@ class HomeController extends Controller
         return $cords;
     }
 
+    public function show_project(){
+        $project = Student::find(1)->getProject;
+        return $project;
+    }
+
 
 }
