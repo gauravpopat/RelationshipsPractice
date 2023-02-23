@@ -19,4 +19,9 @@ class Student extends Model
     {
         return $this->belongsToMany(Project::class,'students_projects');
     }
+
+    public function getProjectByMorph()
+    {
+        return $this->morphMany(Project::class,'projectable');
+    }
 }
